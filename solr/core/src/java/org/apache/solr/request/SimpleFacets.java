@@ -428,7 +428,7 @@ public class SimpleFacets {
 
     final boolean multiToken = sf.multiValued() || ft.multiValuedFieldCache();
     
-    if (ft.getNumericType() != null && !sf.multiValued()) {
+    if (method == null && ft.getNumericType() != null && !sf.multiValued()) {
       // the per-segment approach is optimal for numeric field types since there
       // are no global ords to merge and no need to create an expensive
       // top-level reader
